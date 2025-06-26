@@ -7,11 +7,11 @@ window.addEventListener('DOMContentLoaded', function () {
   const affiliateId = getQueryParam('ref');
 
   const interval = setInterval(() => {
-    const input = document.querySelector('input[data-q="ref_affiliate_id"]');
+    const input = document.querySelector('input[name="ref_affiliate_id"]');
     if (input) {
       input.value = affiliateId || '';
-      console.log('Affiliate ID set:', affiliateId);
+      console.log('Affiliate ID set to:', affiliateId);
       clearInterval(interval);
     }
-  }, 300);
+  }, 500);
 });
